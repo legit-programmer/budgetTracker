@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content {
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(203,47,126,1) 0%, rgba(0,212,255,1) 100%);
+width: 50vw;
+border-radius: 10px;
+padding: 25px 25px 0 25px;
+
+}
+
+.tiles {
+    height: 200px;
+    overflow: scroll;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.form h1 {
+    text-align: center;
+    color: white;
+}
+.single {
+    
+    background-color: aliceblue;
+    width: 95%;
+    padding: 3px 5px 3px 5px;
+    text-align: center;
+    margin: 3px;
+    border-radius: 8px;
+    font-size: x-large;
+    
+}
+.form div div {
+    margin: 25px;
+}
+
+.amt{
+    font-size: 1.5rem;
+    width: 30%;
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    text-align: center;
+    
+}
+
+.c2 {
+    display: flex;
+    justify-content: center;
+    width: 98%;
+}
+
+.rad {
+    color: aliceblue;
+    font-size: 1.5rem;
+    
+    
+     /* Chrome, Safari, Opera */
+
+}
+
+.c2 div {
+    width: 50%;
+
+}
+
+.but {
+    background: transparent;
+    border: 2px solid white;
+    width: 25%;
+    /* margin: px; */
+    color: white;
+    padding: 5px;
+    font-size: 1.25rem;
+    border-radius: 25px;
+    margin-right: 5px;
+}
+
+.but:hover {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.5)
+}
