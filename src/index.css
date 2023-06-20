@@ -18,6 +18,7 @@ padding: 25px 25px 0 25px;
 .tiles {
     height: 200px;
     overflow: scroll;
+    
     /* display: flex;
     justify-content: center; */
 }
@@ -35,10 +36,18 @@ padding: 25px 25px 0 25px;
     margin: 3px;
     border-radius: 8px;
     font-size: x-large;
+    display: flex;
+}
+.single h3 {
+    width: 100%;
+    float: right;
+}
+.close-btn {
+    float: right;
     
 }
 .form div div {
-    margin: 25px;
+    margin: 2% 0 2% 0;
 }
 
 .amt{
@@ -68,7 +77,7 @@ padding: 25px 25px 0 25px;
 }
 
 .c2 div {
-    width: 50%;
+    width: 75%;
 
 }
 

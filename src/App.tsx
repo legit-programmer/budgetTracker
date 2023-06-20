@@ -7,7 +7,7 @@ const App = () => {
     return (
         <div className="content">
             <Form data={data} setData={setData} />
-            <TileMain data={data} />
+            <TileMain data={data} setData={setData}/>
         </div>
     );
 };

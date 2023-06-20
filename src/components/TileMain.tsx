@@ -5,14 +5,15 @@ interface props {
         amount: number;
         color: string;
     }[];
+    setData:any;
 }
 
-const TileMain = ({ data }: props) => {
+const TileMain = ({ data, setData }: props) => {
     return (
         <div className="tiles">
             <div>
-                {data.map((d) => {
-                    return <Tile amount={d.amount} color={d.color} />;
+                {data.map((d, index) => {
+                    return <Tile data={data} setData={setData} id={index} key={index} amount={d.amount} color={d.color} />;
                 })}
             </div>
         </div>
