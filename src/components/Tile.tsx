@@ -18,6 +18,15 @@ const Tile = ({ amount, color, id, data, setData }: props) => {
         });
         setData(temp);
     };
+    const updateTx = ()=>{
+        const temp = [...data]
+        temp.forEach((item, index)=>{
+            if(index==id){
+                item.amount=Number(prompt('Enter an amount'))
+            }
+        })
+        setData(temp);
+    }
     return (
         <div className="single">
             <h3
@@ -30,6 +39,14 @@ const Tile = ({ amount, color, id, data, setData }: props) => {
             >
                 {amount}Rs
             </h3>
+            <div className="close-btn">
+                <button 
+                    onClick={updateTx}
+                    type="button"
+                    className="btn btn-outline-success"
+                    aria-label="Close"
+                >Update</button>
+            </div>
             <div className="close-btn">
                 <button
                     onClick={handleClick}
