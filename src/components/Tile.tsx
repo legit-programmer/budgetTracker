@@ -22,7 +22,10 @@ const Tile = ({ amount, color, id, data, setData }: props) => {
         const temp = [...data]
         temp.forEach((item, index)=>{
             if(index==id){
-                item.amount=Number(prompt('Enter an amount'))
+                const temp = prompt('Enter an amount')
+                if(temp!=null){
+                    item.amount=Number(temp);
+                }
             }
         })
         setData(temp);
@@ -43,7 +46,7 @@ const Tile = ({ amount, color, id, data, setData }: props) => {
                 <button 
                     onClick={updateTx}
                     type="button"
-                    className="btn btn-outline-success"
+                    className="btn btn-outline-primary"
                     aria-label="Close"
                 >Update</button>
             </div>
