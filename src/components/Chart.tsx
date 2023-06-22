@@ -12,8 +12,8 @@ import { useState } from "react";
 
 const Chart = () => {
     const status:any = localStorage.getItem('transactions');
-    const [data, setData] = useState(status===''?[]:JSON.parse(status));
-    
+    const data = useState(status===''?[]:JSON.parse(status));
+
 
     return (
         <div>
