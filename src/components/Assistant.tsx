@@ -22,6 +22,7 @@ const Assistant = () => {
 
     return (
         <>
+            <h1>{data}</h1><br/>
             <input
                 placeholder="Ask something..."
                 type="text"

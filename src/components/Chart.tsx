@@ -8,11 +8,15 @@ import {
     Bar,
 } from "recharts";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Chart = () => {
     const status:any = localStorage.getItem('transactions');
-    const data = useState(status===''?[]:JSON.parse(status));
+    const [data, setData] = useState(status===''?[]:JSON.parse(status));
+    useEffect(()=>{
+        setData(JSON.parse(status));
+        console.log('changed')
+    }, [status])
 
 
     return (
