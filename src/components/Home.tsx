@@ -1,13 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Form from './Form';
 import TileMain from './TileMain';
 
 const Home = () => {
     const status:any = localStorage.getItem('transactions');
     const [data, setData] = useState(status===''?[]:JSON.parse(status));
-    useEffect(()=>{
-        localStorage.setItem('transactions', JSON.stringify(data));
-    }, [data])
+    
     return (
         <div className="home">
             <div className="content">
