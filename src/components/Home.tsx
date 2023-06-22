@@ -9,9 +9,11 @@ const Home = () => {
         localStorage.setItem('transactions', JSON.stringify(data));
     }, [data])
     return (
-        <div className="content">
-            <Form data={data} setData={setData} />
-            <TileMain data={data} setData={setData}/>
+        <div className="home">
+            <div className="content">
+                <Form data={data} setData={setData} />
+                <TileMain data={data} setData={setData}/>
+            </div>
         </div>
     );
 }

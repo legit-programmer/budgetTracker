@@ -23,13 +23,13 @@ const Form = ({data, setData}:props) => {
                     <div className="c2">
                         <div className="form-div">
                             <div>
-                                <input className="amt" onChange={(e)=>setAmount(Number(e.target.value))}  id="amount" />
+                                <input type="number" className="amt" onChange={(e)=>setAmount(Number(e.target.value))}  id="amount" />
                                 <br />
                                 <div className="rad">
-                                    <input defaultChecked onChange={(e)=>e.target.value&&setColor('red')} type="radio" name="category" />
+                                    <input defaultChecked onChange={(e)=>e.target.value&&setColor('Expense')} type="radio" name="category" />
                                     <label>Expense</label>
                                     <br />
-                                    <input onChange={(e)=>e.target.value&&setColor('green')} type="radio" name="category" />
+                                    <input onChange={(e)=>e.target.value&&setColor('Savings')} type="radio" name="category" />
                                     <label>Earnings</label>
                                 </div>
                                 <br />

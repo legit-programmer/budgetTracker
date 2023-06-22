@@ -35,7 +35,7 @@ const Tile = ({ amount, color, id, data, setData }: props) => {
             <h3
                 style={{
                     color:
-                        color == "red"
+                        color == "Expense"
                             ? "rgb(220, 83, 83)"
                             : "rgb(18, 155, 112)",
                 }}
