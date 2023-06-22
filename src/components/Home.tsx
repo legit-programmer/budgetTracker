@@ -4,7 +4,7 @@ import TileMain from './TileMain';
 
 const Home = () => {
     const status:any = localStorage.getItem('transactions');
-    const [data, setData] = useState(status===''?[]:JSON.parse(status));
+    const [data, setData] = useState(status===''||status===null?[]:JSON.parse(status));
     
     return (
         <div className="home">
