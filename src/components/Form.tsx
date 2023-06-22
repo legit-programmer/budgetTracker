@@ -7,7 +7,7 @@ interface props {
 
 const Form = ({data, setData}:props) => {
     const [amount, setAmount] = useState(0);
-    const [color, setColor] = useState('red');
+    const [color, setColor] = useState('Expense');
     
     const handleClick = ()=>{
         let temp = [...data]
