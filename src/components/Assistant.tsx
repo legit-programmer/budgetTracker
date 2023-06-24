@@ -1,6 +1,6 @@
 import { useState } from "react";
 // import { Configuration, OpenAIApi } from "openai";
-// import axios from "axios";
+import axios from "axios";
 
 const Assistant = () => {
     const [data, setData] = useState("");
@@ -19,17 +19,35 @@ const Assistant = () => {
     //         temperature: 0,
     //     }).then((res)=>console.log(res));
     // };
-
+    const request = () => {
+        axios
+            .post(
+                " https://api.openai.com/v1/chat/completions",
+                {
+                    'model': "gpt-3.5-turbo",
+                    messages: [{ role: "user", content: "Hi!" }],
+                    temperature: 0.1,
+                },
+                {
+                    headers: {
+                        Authorization:
+                            "Bearer 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",
+                    },
+                }
+            )
+            .then((res) => console.log(res));
+    };
     return (
         <>
-            <h1>{data}</h1><br/>
+            <h1>{data}</h1>
+            <br />
             <input
                 placeholder="Ask something..."
                 type="text"
                 onChange={(e) => setData(e.target.value)}
             />
             <br />
-            <button >Submit</button>
+            <button onClick={request} >Submit</button>
         </>
     );
 };
